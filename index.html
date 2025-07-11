@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comprehensive biography and portfolio of Arman Firmansyah, ideal for partners, employers, and collaborators in creative industries.">
+  <title>Arman Firmansyah | Biography &amp; Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #001f3f 0%, #003459 100%);
+      color: #fff;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    .card {
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 40px;
+      margin-bottom: 50px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
+    }
+    .card:hover { transform: translateY(-5px); }
+    header.card {
+      text-align: center;
+      background: none;
+      box-shadow: none;
+      padding-bottom: 0;
+    }
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #FFDC00;
+      margin: auto;
+      display: block;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+    h1 {
+      margin: 20px 0 10px;
+      font-size: 3rem;
+      color: #FFDC00;
+      font-weight: 800;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    }
+    .subtitle {
+      font-size: 1.2rem;
+      color: #FFDC00;
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    .tagline {
+      font-size: 1rem;
+      margin: 15px auto;
+      color: #eee;
+      max-width: 720px;
+      line-height: 1.4;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 14px 28px;
+      background-color: #FFDC00;
+      color: #001f3f;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: background-color 0.3s;
+    }
+    .cta-button:hover { background-color: #e6c300; }
+    .section-title {
+      font-size: 2rem;
+      color: #FFDC00;
+      font-weight: 800;
+      margin-bottom: 30px;
+      position: relative;
+    }
+    .section-title::after {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background: #FFDC00;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 2px;
+    }
+    .grid { display: grid; gap: 24px; }
+    .projects-grid { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .project-card {
+      background: rgba(255,255,255,0.02);
+      border-radius: 12px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+    .project-card:hover { transform: scale(1.03); }
+    .project-card img { width: 100%; height: 150px; object-fit: cover; }
+    .project-card h3 {
+      margin: 16px 0 8px;
+      color: #FFDC00;
+      font-weight: 600;
+    }
+    .project-card p {
+      padding: 0 16px 20px;
+      font-size: 0.95rem;
+      color: #ddd;
+      line-height: 1.4;
+    }
+    .experience {
+      list-style: none;
+      padding: 0;
+      max-width: 800px;
+      margin: auto;
+      display: grid;
+      gap: 15px;
+    }
+    .experience li {
+      background: rgba(255,255,255,0.02);
+      padding: 16px;
+      border-radius: 8px;
+      position: relative;
+    }
+    .experience li::before {
+      content: '✓';
+      color: #FFDC00;
+      font-weight: bold;
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .experience li span { margin-left: 24px; }
+    /* Clients Grid */
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 24px;
+      align-items: center;
+      justify-items: center;
+      margin-top: 20px;
+    }
+    .clients-grid img {
+      max-width: 100px;
+      height: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+    .clients-grid img:hover { opacity: 1; filter: none; }
+    .clients-grid img.original-color { filter: none !important; opacity: 1 !important; }
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    footer a { color: #FFDC00; text-decoration: none; margin: 0 8px; }
+    @media(max-width:600px) {
+      .container { padding: 40px 10px; }
+      h1 { font-size: 2.4rem; }
+      .section-title { font-size: 1.6rem; }
+      .cta-button { width: 100%; padding: 14px; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .clients-grid { grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="card">
+      <img src="https://media.licdn.com/dms/image/v2/D5603AQEA-J0WtsExsg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1684840175665?e=1757548800&v=beta&t=RK3Am_JE_3X7lHGlWuole30FIhAr8R_X3rt88QBwkBg" alt="Arman Firmansyah" class="profile-img">
+      <h1>Arman Firmansyah</h1>
+      <p class="subtitle">Biography &amp; Portfolio</p>
+      <p class="tagline">Open for strategic partnerships, hiring inquiries, and creative collaborations. Whether you’re seeking a visionary creator, a reliable team leader, or an inspiring workshop facilitator, let’s connect and build something extraordinary.</p>
+      <a href="#contact" class="cta-button">Get in Touch</a>
+    </header>
+
+    <section class="card">
+      <div class="section-title">About Me</div>
+      <p>With over a decade of creative experience, I lead multidisciplinary projects at the intersection of comedy, music, and digital storytelling. As <strong>Arman Vesona</strong>, I’ve produced 100+ videos, founded <strong>Freak Enjoy</strong> band, and launched <strong>Vesona Music Production</strong>. I develop web platforms, write anime scripts, and mentor creative teams — all while championing innovation and quality.</p>
+    </section>
+
+    <section class="card">
+      <div class="section-title">Key Projects</div>
+      <div class="grid projects-grid">
+        <div class="project-card">
+          <img src="https://picsum.photos/seed/armanvesona/300" alt="Arman Vesona Channel">
+          <h3>Arman Vesona Channel</h3>
+          <p>100+ comedic sketches & music videos on YouTube; signature <em>VESONA DRAMA</em> series.</p>
+        </div>
+        <div class="project-card">
+          <img src="https://picsum.photos/seed/freakenjoy/300" alt="Freak Enjoy">
+          <h3>Freak Enjoy</h3>
+          <p>Experimental jazz-dangdut band; viral single inspired by “Garam &amp; Madu”.</p>
+        </div>
+        <div class="project-card">
+          <img src="https://picsum.photos/seed/vesonamusic/300" alt="Vesona Music Production">
+          <h3>Vesona Music Production</h3>
+          <p>Digital label & global distribution via TuneCore for emerging artists.</p>
+        </div>
+        <div class="project-card">
+          <img src="https://picsum.photos/seed/producemusic/300" alt="Music Production">
+          <h3>Music Production</h3>
+          <p>Produced original tracks—handling arrangement, mixing, and mastering.</p>
+        </div>
+        <div class="project-card">
+          <img src="https://picsum.photos/seed/animeopening/300" alt="Anime Opening">
+          <h3>Anime Opening</h3>
+          <p>Idul Fitri-themed 2D sketch opening with a poetic soundtrack.</p>
+        </div>
+        <div class="project-card">
+          <img src="https://picsum.photos/seed/workshops/300" alt="Workshops">
+          <h3>Workshops</h3>
+          <p>Creative writing, digital illustration & content strategy training.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">Why Partner with Me?</div>
+      <ul class="experience">
+        <li><span><strong>Proven Creativity:</strong> Diverse portfolio spanning video, music, and animation.</span></li>
+        <li><span><strong>Leadership:</strong> Experienced team lead coordinating cross-functional projects.</span></li>
+        <li><span><strong>Reliability:</strong> Consistent delivery on time and within scope.</span></li>
+        <li><span><strong>Innovation:</strong> Passion for experimenting with new formats and genres.</span></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <div class="section-title">Brand Collaborations</div>
+      <div class="clients-grid">
+        <img src="Assets/AQUA.png" alt="AQUA" class="original-color">
+        <img src="Assets/Cimory.png" alt="CIMORY" class="original-color">
+        <img src="Assets/Kanzler.png" alt="KANZLER" class="original-color">
+        <img src="Assets/Kanzler Singles.png" alt="KANZLER SINGLES" class="original-color">
+        <img src="Assets/Milkita.png" alt="MILKITA" class="original-color">
+        <img src="Assets/PLN.png" alt="PLN" class="original-color">
+        <img src="Assets/STARMAKER.png" alt="STARMAKER" class="original-color">
+        <img src="Assets/TOKOPEDIA.png" alt="TOKOPEDIA" class="original-color">
+        <img src="Assets/HEVIT-C.png" alt="HEVIT-C" class="original-color">
+        <img src="Assets/flipid.png" alt="FLIP" class="original-color">
+        <img src="Assets/PIKACHUS INDONESIA JOURNEY.png" alt="PIKACHUS INDONESIA JOURNEY" class="original-color">
+        <img src="Assets/BANDUNG CHEESECUIT.png" alt="BANDUNG CHEESECUIT" class="original-color">
+        <img src="Assets/HAUS!.png" alt="HAUS!" class="original-color">
+        <img src="Assets/TANTAN.png" alt="TANTAN" class="original-color">
+        <img src="Assets/LITMATCH.png" alt="LITMATCH" class="original-color">
+        <img src="Assets/VIUUM.png" alt="VIUUM">
+        <img src="Assets/REBLOOD.png" alt="REBLOOD">
+        <img src="Assets/NOAH's PARK.png" alt="NOAH's PARK">
+        <img src="Assets/WarnerMusicIndonesia.png" alt="WARNER MUSIC INDONESIA">
+        <img src="Assets/Morinaga Soya.png" alt="MORINAGA SOYA">
+        <img src="Assets/ACOME.png" alt="ACOME">
+        <img src="Assets/TECNO.png" alt="TECNO">
+        <img src="Assets/AMATERASUN.png" alt="AMATERASUN">
+        <img src="Assets/BCA.png" alt="BCA">
+        <img src="Assets/Grab_Logo.png" alt="GRAB">
+        <img src="Assets/KOMINFO.png" alt="KOMINFO">
+        <img src="Assets/OLATTE~1.png" alt="OLATTE">
+        <img src="Assets/SARIMI.png" alt="SARIMI">
+        <img src="Assets/SMARTFREN.png" alt="SMARTFREN">
+        <img src="Assets/UNIPIN.png" alt="UNIPIN">
+        <img src="Assets/BEJO.png" alt="BEJO">
+      </div>
+    </section>
+
+        <section class="card">
+      <div class="section-title">Experience</div>
+      <div class="grid experiences-grid projects-grid">
+        <div class="project-card">
+          <img src="Assets/PTVesonaKitaBersama.png" alt="PT Vesona Kita Bersama Logo">
+          <h3>Owner</h3>
+          <p>PT Vesona Kita Bersama (May 2012 – Present)</p>
+        </div>
+        <div class="project-card">
+          <img src="Assets/ArmanVesona.png" alt="Arman Vesona Logo">
+          <h3>Content Creator & Sound Designer</h3>
+          <p>Arman Vesona (Freelance, Feb 2021 – Present)</p>
+        </div>
+        <div class="project-card">
+          <img src="Assets/KratoonChannel.png" alt="Krattoon Channel Logo">
+          <h3>Sound Engineer &amp; Video Editor</h3>
+          <p>Kratoon Channel (Aug 2019 – Feb 2021)</p>
+        </div>
+        <div class="project-card">
+          <img src="Assets/KratoonChannel.png" alt="Krattoon Channel Logo">
+          <h3>Sound Engineer</h3>
+          <p>Kratoon Channel (Mar 2018 – Jul 2019)</p>
+        </div>
+        <div class="project-card">
+          <img src="Assets/WebTVAsia.png" alt="WebTVAsia Logo">
+          <h3>Creator Talent</h3>
+          <p>WebTVAsia (Sep 2016 – Sep 2019)</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="contact">
+      <div class="section-title">Let’s Collaborate</div>
+      <p>Ready to elevate your next project? I’m available for partnerships, consulting, and full-time opportunities. Reach out via email or connect on LinkedIn.</p>
+      <a href="mailto:armanfirmansyahv@gmail.com" class="cta-button">Email Me</a>
+    </section>
+
+    <footer>
+      <p>Contact: <a href="mailto:armanfirmansyahv@gmail.com">armanfirman@example.com</a> | <a href="https://vesonakita.com" target="_blank">vesonakita.com</a> | <a href="https://www.linkedin.com/in/armanfirmansyah/" target="_blank">LinkedIn</a></p>
+    </footer>
+  </div>
+</body>
+</html>
